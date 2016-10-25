@@ -1,0 +1,36 @@
+{
+  "name": "react-speed-book",
+  "version": "1.0.0",
+  "description": "Companion code for React Speed Coding book",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "start": "SET NODE_ENV=development & webpack-dev-server --inline",
+    "build": "NODE_ENV=production webpack --config webpack.prod.config.js"
+  },
+  "author": "Sasha",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.5.1",
+    "babel-core": "^6.18.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-react-hmre": "^1.1.1",
+    "copy-webpack-plugin": "^4.0.0",
+    "css-loader": "^0.25.0",
+    "html-webpack-plugin": "^2.24.0",
+    "json-loader": "^0.5.4",
+    "normalize.css": "^5.0.0",
+    "postcss-easy-import": "^1.0.1",
+    "postcss-loader": "^1.0.0",
+    "precss": "^1.4.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.2"
+  }
+}
