@@ -1,1 +1,1 @@
-react-speed-coding
+Inspired by ReactSpeedCoding book
