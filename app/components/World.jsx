@@ -44,13 +44,13 @@ export default class World extends Component {
                     <a onClick={this.slangGreet}>Slang</a>
                     &nbsp;OR;&nbsp;
                     <a onClick={this.polakGreet}>Polak</a>
-                    <input
-                        type="text"
-                        value={this.state.value}
-                        placeholder="Enter a name"
-                        onChange={this.handleNameChange}
-                        />
                 </h2>
+                <input
+                    type="text"
+                    value={this.state.value}
+                    placeholder="Enter a name"
+                    onChange={this.handleNameChange}
+                    />
             </div>
         )
     }
