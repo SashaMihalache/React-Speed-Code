@@ -13,6 +13,7 @@ export default class World extends Component {
 
     constructor(props) {
         super(props);
+        
         this.state = {
             currentGreeting: props.greet,
             value: 'ReactSpeedCoding'
