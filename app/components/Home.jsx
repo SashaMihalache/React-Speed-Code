@@ -1,6 +1,7 @@
 import React, { PropTypes, Component } from 'react';
 import World from './World';
 import Card from './Card';
+import Youtube from './Youtube';
 
 export default class Home extends Component {
   render() {
@@ -38,6 +39,19 @@ export default class Home extends Component {
             </p>
           </Card>
         </section>
+
+        <section className="stripe">
+          <Card plain className="col--one-third text--center back--white">
+            <Youtube videoid="9cMhWPID38c" />
+          </Card>
+          <Card plain className="col--half text--center">
+            <h1>Embed React Components</h1>
+            <p className="subtext">
+              This custom component demonstrates media embed within a custom React component.
+            </p>
+          </Card>
+        </section>
+
         <section className="stripe back--default">
           <Card plain className="col--half text--center">
             <h1>Custom React Component</h1>
