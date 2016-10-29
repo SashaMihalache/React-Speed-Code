@@ -38,11 +38,11 @@ export default class World extends Component {
     render() {
         const renderGreeting = this.state.value ? `${this.state.value} says ${this.state.currentGreeting}` : this.state.currentGreeting;
         return (
-            <div className="world-card">
+            <div>
                 <Hello greet={renderGreeting} message="Sasha!" />
                 <h2>
                     <a onClick={this.slangGreet}>Slang</a>
-                    &nbsp;OR;&nbsp;
+                    &nbsp;OR&nbsp;
                     <a onClick={this.polakGreet}>Polak</a>
                 </h2>
                 <input
