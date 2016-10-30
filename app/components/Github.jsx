@@ -1,10 +1,7 @@
-import React, { PropTypes} from 'react';
+import React, { PropTypes } from 'react';
 import IconText from './IconText';
 
 export default class Github extends React.Component {
-    static propTypes = {
-        repo: PropTypes.string.isRequired
-    }
 
     constructor(props) {
         super(props);
@@ -17,8 +14,8 @@ export default class Github extends React.Component {
 
     componentDidMount() {
         const sourceRepo = `https://api.github.com/repos/${this.props.repo}`;
-
-        this.serverRequest = $.get(sourceRepo, function(result) {
+        
+        this.serverRequest = $.get(sourceRepo, function (result) {
             this.setState({
                 full_name: result.full_name,
                 stargazers_count: result.stargazers_count,
@@ -30,13 +27,13 @@ export default class Github extends React.Component {
     componentWillUnmount() {
         this.serverRequest.abort();
     }
-    
+
     render() {
         return (
             this.state.full_name
                 ? <div>
                     <h1>
-                        <IconText slim className="primary" icon="github" text={this.state.full_name}/>
+                        <IconText slim className="primary" icon="github" text={this.state.full_name} />
                     </h1>
                     <h2>
                         <IconText slim className="secondary" icon="star" text={`${this.state.stargazers_count} stars`} />
@@ -47,5 +44,10 @@ export default class Github extends React.Component {
                 </div>
                 : <p>Loading Live Stats...</p>
         )
-    }    
+    }
+
+    static propTypes = {
+        repo: PropTypes.string.isRequired
+    }
+
 }
