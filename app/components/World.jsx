@@ -1,5 +1,8 @@
 import React, { PropTypes, Component } from 'react';
 import Hello from './Hello.jsx';
+import Input from './Input';
+import InputLabel from './InputLabel';
+import InputField from './InputField';
 
 export default class World extends Component {
 
@@ -45,15 +48,17 @@ export default class World extends Component {
                     &nbsp;OR&nbsp;
                     <a onClick={this.polakGreet}>Polak</a>
                 </h2>
-                <input
-                    type="text"
-                    value={this.state.value}
-                    placeholder="Enter a name"
-                    onChange={this.handleNameChange}
+                <Input>
+                    <InputLabel label="Name" />
+                    <InputField
+                        type="text"
+                        value={this.state.value}
+                        placeholder="Enter a name"
+                        onChange={this.handleNameChange}
                     />
+                </Input>
             </div>
         )
     }
-
 
 }
