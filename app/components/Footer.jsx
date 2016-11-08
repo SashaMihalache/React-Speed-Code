@@ -4,7 +4,7 @@ const Footer = () => (
     <section className="stripe--slim back--gray">
         <Card plain className="col--full text--center white">
             <p>
-                Copyright (c) 2016, Manav Sehgal.
+                Copyright (c) 2016, Sasha Mihalache.
                 All rights reserved.
             </p>
         </Card>

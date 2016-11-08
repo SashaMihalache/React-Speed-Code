@@ -11,7 +11,7 @@ const AboutAjax = () => (
             <GitHub repo="facebook/react" />
         </Card>
         <Card className="col--quarter text--center back--default">
-            <GitHub repo="meteor/meteor" />
+            <GitHub repo="vuejs/vue" />
         </Card>
     </section>
 );
