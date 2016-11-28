@@ -18,30 +18,32 @@ import Roadmap from './components/Roadmap';
 
 import store from './store/roadmap';
 import roadmapHydrate from './fixtures/roadmap/hydrate';
+import rsdb from './fixtures/rsdb.js';
 
 roadmapHydrate();
-
 const routeConfig = (
-  <Route path="/" component={Landing}>
-    <IndexRoute component={Roadmap} />
-    <Route path="/roadmap" component={Roadmap} />
-    <Route path="/book" component={AboutBook} />
-    <Route path="/charts" component={AboutCharts} />
-    <Route path="/embeds" component={AboutEmbeds} />
-    <Route path="/forms" component={AboutForms} />
-    <Route path="/custom" component={AboutCustom} />
-    <Route path="/workflow" component={AboutWorkflow} />
-    <Route path="/buttons" component={AboutButtons} />
-    <Route path="/ajax" component={AboutAjax} />
-    <Route path="/infographics"
-      component={AboutInfographics} />
-    <Route path="*" component={MissingRoute} />
-  </Route>
+    <Route path="/" component={Landing}>
+        <IndexRoute component={Roadmap} />
+        <Route path="/roadmap" component={Roadmap} />
+        <Route path="/book" component={AboutBook} />
+        <Route path="/charts" component={AboutCharts} />
+        <Route path="/embeds" component={AboutEmbeds} />
+        <Route path="/forms" component={AboutForms} />
+        <Route path="/custom" component={AboutCustom} />
+        <Route path="/workflow"
+            rsdb={rsdb}
+            component={AboutWorkflow} />
+        <Route path="/buttons" component={AboutButtons} />
+        <Route path="/ajax" component={AboutAjax} />
+        <Route path="/infographics"
+            component={AboutInfographics} />
+        <Route path="*" component={MissingRoute} />
+    </Route>
 );
 
 ReactDOM.render(
-  <Provider store={store}>
-    <Router history={browserHistory} routes={routeConfig} />
-  </Provider>,
-  document.getElementById('app')
+    <Provider store={store}>
+        <Router history={browserHistory} routes={routeConfig} />
+    </Provider>,
+    document.getElementById('app')
 );
