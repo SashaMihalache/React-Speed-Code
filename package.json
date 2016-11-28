@@ -10,7 +10,8 @@
     "profile": "SET NODE_ENV=production & webpack --config webpack.prod.config.js --profile --json > profile.json",
     "lint": "SET NODE_ENV=lint & webpack-dev-server --config webpack.lint.config.js",
     "test": "SET NODE_ENV=test & mocha --compilers js:babel-core/register --recursive || true",
-    "cover": "SET NODE_ENV=test & babel-node ./node_modules/.bin/babel-istanbul cover _mocha --  --require test/browser.js test/**/*.spec.js --reporter dot || true"
+    "cover": "SET NODE_ENV=test & babel-node ./node_modules/.bin/babel-istanbul cover _mocha --  --require test/browser.js test/**/*.spec.js --reporter dot || true",
+    "storybook": "start-storybook -p 9001 -s ./app/public"
   },
   "author": "Sasha",
   "license": "MIT",
@@ -24,6 +25,7 @@
     "rumble-charts": "^1.0.14"
   },
   "devDependencies": {
+    "@kadira/storybook": "^2.33.0",
     "autoprefixer": "^6.5.1",
     "babel-cli": "^6.18.0",
     "babel-core": "^6.18.0",
